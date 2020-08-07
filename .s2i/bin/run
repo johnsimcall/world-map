@@ -1,0 +1,10 @@
+#!/bin/bash -e
+#
+# S2I run script for the 'rhscl/nodejs-6-rhel7' image.
+# The run script executes the server that runs your application.
+#
+# For more information see the documentation:
+#	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
+#comment
+
+exec node /opt/app-root/src/server.js --public
