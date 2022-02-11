@@ -7,7 +7,8 @@ To compile/build and launch this application in OpenShift simply:
 
 ```bash
 oc new-project world-map
-oc new-app nodejs:10~https://github.com/johnsimcall/world-map.git --name=world-map
+~~oc new-app nodejs:10~https://github.com/johnsimcall/world-map.git --name=world-map~~
+oc new-app registry.access.redhat.com/ubi8/nodejs-10~https://gitlab.com/zews79/s2i-cesium --name=world-map-s2i
 oc expose service world-map
 oc get route/world-map --template=http://{{.spec.host}}
 ```
